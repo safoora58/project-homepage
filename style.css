@@ -1,0 +1,4731 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: gandom;
+    background-color: #f0f3f5;
+    overflow-x: hidden;
+
+}
+
+@font-face {
+    font-family: gandom;
+    src: url(./fonts/Gandom.eot);
+    src: url(./fonts/Gandom.eot) format('embedded-opentype'),
+        url(./fonts/Gandom.woff2) format('woff2'),
+        url(./fonts/Gandom.woff) format('woff'),
+        url(./fonts/Gandom.ttf) format('truetype');
+}
+
+
+.grid-container {
+    width: 100vw;
+    height: 5000px;
+    display: grid;
+    grid-template-columns: 40% 885px 200px 40%;
+    grid-template-rows: 400px 53px 407px 407px 375px 165px 375px 375px 375px 375px 165px 375px 375px 165px 407px 407px 407px 165px 375px 375px 407px 375px 407px 165px 375px 375px 165px 375px 465px;
+    gap: 25px;
+    position: absolute;
+
+}
+
+.searchbox {
+    grid-area: 1/1/2/3;
+    width: 100vw;
+    height: 70px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    z-index: 2;
+    position: fixed;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cover {
+    width: 1100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.logo {
+    width: 110px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    background: radial-gradient(circle, rgba(66, 66, 66, 0.1), rgba(248, 247, 247, 0.3)), url(image/logo.png);
+}
+
+
+
+
+.bars {
+    position: absolute;
+    left: 150px;
+    display: none;
+}
+
+.bars i {
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.input-icon {
+    width: 365px;
+    height: 40px;
+    position: absolute;
+    right: 15%;
+
+}
+
+.search {
+    width: 365px;
+    height: 40px;
+    position: absolute;
+    z-index: 3;
+    border-radius: 10px;
+    cursor: text;
+    border: hidden;
+    background-color: #eaeaea;
+
+
+}
+
+::placeholder {
+    color: #757575;
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    font-size: 15px;
+    font-family: gandom;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.i {
+    color: #464646;
+    position: absolute;
+    left: 4%;
+    top: 20%;
+    font-size: 19px;
+    z-index: 3;
+    display: inline;
+
+}
+
+.enter {
+    width: 150px;
+    height: 35px;
+    padding: 5px 27px 9px 0;
+    display: flex;
+    position: absolute;
+    left: 0;
+}
+
+.en-re {
+    width: 80px;
+    height: 21px;
+    position: relative;
+    left: 25%;
+    font-size: 13px;
+    font-weight: 700;
+
+}
+
+.en-re:hover {
+    color: #d14900;
+}
+
+.user {
+    font-size: 17px;
+    position: relative;
+    left: 25%;
+}
+
+
+.header {
+    grid-area: 1/1/2/3;
+    cursor: pointer;
+    height: 400px;
+    width: 100vw;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(8, 0, 0, 0.3)), url(image/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+
+
+}
+
+.header-content {
+    width: 50%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    top: 45%;
+
+}
+
+
+.title {
+    width: 635px;
+    height: 55px;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 0px;
+}
+
+.app {
+
+    height: 39px;
+    width: 290px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 7px 0 7px 15px;
+    color: #212121;
+    border-radius: 50px;
+    margin-left: 160px;
+    margin-top: 20px;
+
+
+}
+
+
+.app:hover {
+    background-color: #f5f5f5;
+}
+
+.icons {
+    width: 65px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.apple {
+    color: #a09e9e;
+    font-size: 22px;
+
+}
+
+.android {
+    color: #75b828;
+    font-size: 22px;
+}
+
+.windows {
+    color: #00a8eb;
+    font-size: 20px;
+}
+
+
+.navebar {
+    grid-area: 2/2/3/3;
+    display: flex;
+    direction: rtl;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+
+}
+
+#navebar {
+    display: flex;
+
+}
+
+#navebar .audio {
+    height: 39px;
+    width: 137px;
+    background-color: #ffffff;
+    list-style: none;
+    border-radius: 7px;
+    font-size: 16.5px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 1px 8px 10px;
+    text-decoration: none;
+
+}
+
+#navebar .audio:hover {
+    color: #cc6600;
+}
+
+#navebar .free {
+    height: 39px;
+    width: 137px;
+    background-color: #ffffff;
+    list-style: none;
+    border-radius: 7px;
+    font-size: 16.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    margin: 5px 0 8px 10px;
+}
+
+#navebar .free:hover {
+    color: #cc6600;
+}
+
+#navebar .discount {
+    margin: 5px 0 8px 10px;
+    height: 39px;
+    width: 173px;
+    background-color: #ffffff;
+    list-style: none;
+    border-radius: 7px;
+    font-size: 16.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+
+}
+
+#navebar .discount:hover {
+    color: #cc6600;
+
+}
+
+#navebar .sell {
+    height: 39px;
+    width: 137px;
+    background-color: #ffffff;
+    list-style: none;
+    border-radius: 7px;
+    font-size: 16.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    margin: 5px 0 8px 10px;
+}
+
+
+#navebar .sell:hover {
+    color: #cc6600;
+
+}
+
+#navebar .selected {
+    height: 39px;
+    width: 137px;
+    background-color: #ffffff;
+    list-style: none;
+    border-radius: 7px;
+    font-size: 16.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    margin: 5px 0 8px 109px;
+}
+
+#navebar .selected:hover {
+    color: #cc6600;
+
+}
+
+#sidebar li {
+    list-style: none;
+    font-size: 15px;
+    width: 200px;
+    height: 36px;
+    padding: 7px 10px 7px 10px;
+    color: #444444;
+
+}
+
+#sidebar li:hover {
+    color: #cc6600;
+
+}
+
+
+.sidebar {
+    grid-area: 2/3/6/4;
+    height: 1025px;
+    width: 200px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    cursor: pointer;
+    top: 15px;
+    border-radius: 7px;
+    position: relative;
+
+
+
+
+}
+
+.name {
+    font-size: 16px;
+    width: 200px;
+    height: 41px;
+    padding: 12px 10px 7px 10px;
+    color: #444444;
+
+}
+
+.name:hover {
+    color: #cc6600;
+
+}
+
+
+.visit-books {
+    grid-area: 3/2/4/3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #22211f;
+    background-image: url(image/20.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+
+
+
+
+}
+
+.book-week {
+    width: 875px;
+    height: 95px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    padding: 10px 25px 15px 25px;
+    margin-top: 7px;
+
+}
+
+.book-week .week {
+    width: 218px;
+    height: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-week .selling {
+    width: 218;
+    height: 28px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.book-week .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 720px;
+    bottom: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.visitbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 0 25px 0 0;
+    margin-bottom: 5px;
+
+}
+
+.visitbooks-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 492px;
+    top: 286px;
+}
+
+.visitbooks-pic .third-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.visitbooks-pic .second-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 320px;
+    top: 286px;
+}
+
+.visitbooks-pic .second-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+
+
+.visitbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+    opacity: 1;
+}
+
+.visitbooks-pic img:hover {
+    opacity: 0.8;
+    background-color: rgba(248, 247, 247, 0.3);
+
+}
+
+
+img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+    opacity: 1;
+
+
+}
+
+img:hover {
+    opacity: 0.9;
+    background-color: black;
+}
+
+
+.visitbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.visitbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.visitbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.visitbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-visitbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-visitbooks p {
+    color: #ffffff;
+}
+
+.writerprice-visitbooks .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-visitbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-visitbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.visitbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+.best-books {
+    grid-area: 4/2/5/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #fef4ea;
+    background-image: url(image/back.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+
+
+
+}
+
+
+.Publishers {
+    width: 855px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-bottom: 10px;
+
+}
+
+.Publishers .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.Publishers .week {
+    width: 218px;
+    height: 25px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Publishers .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 740px;
+    bottom: 44px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.bestbooks-pics {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 0 25px 0 0;
+    margin-bottom: 5px;
+
+}
+
+.bestbooks-pics img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.bestbooks-pics a:first-child {
+    margin-left: 0;
+
+}
+
+.bestbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.bestbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #212121;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.bestbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-bestbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-bestbooks p {
+    color: #212121;
+}
+
+.writerprice-bestbooks .wp-a,
+.wp-b,
+.wp-c {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-bestbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-bestbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.bestbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.selected-updates {
+    grid-area: 5/2/6/3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+
+}
+
+.updates {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 10px;
+
+}
+
+.updates .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.updates .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.selectedupdates-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+
+}
+
+.selectedupdates-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 493px;
+    top: 264px;
+}
+
+.selectedupdates-pic .forth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 660px;
+    top: 264px;
+}
+
+.selectedupdates-pic .first-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 150px;
+    top: 264px;
+}
+
+.forth-headset i,
+.third-headset i,
+.first-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+
+
+.selectedupdates-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.selectedupdates-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.selectedupdates-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.selectedupdates-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.selectedupdates-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-selectedupdates,
+.writerprice {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-selectedupdates p {
+    color: #424242;
+}
+
+.writerprice div:nth-child(1),
+.writerprice div:nth-child(2),
+.writerprice div:nth-child(3),
+.writerprice div:nth-child(4),
+.writerprice div:nth-child(5) {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice div:nth-child(2) {
+    margin-left: 25px;
+}
+
+.writerprice div:nth-child(3) {
+    margin-left: 24px;
+}
+
+.writerprice div:nth-child(4) {
+    margin-left: 23px;
+}
+
+.writerprice div:nth-child(5) {
+    margin-left: 22px;
+}
+
+.selectedupdates-name p:hover {
+    color: #cc6600;
+}
+
+.writerprice a p:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.lusi p {
+    width: 80px;
+    height: 28px;
+    direction: rtl;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.he-book {
+    grid-area: 6/2/7/3;
+    width: 885px;
+    background-color: #d2a77c;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    direction: rtl;
+    background-image: url(image/5.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute;
+
+
+}
+
+.he {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 7px;
+
+
+}
+
+.visit {
+    width: 127px;
+    height: 32px;
+    font-size: 15px;
+    color: #000000;
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+    background-color: #debd9d;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.sell-textbook {
+    grid-area: 7/2/8/3;
+    background-color: rgb(136, 212, 241);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+.textbook {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 10px;
+
+}
+
+.selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.sell-textbook .book-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.book-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.book-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.book-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.book-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.book-name p:first-child {
+    margin-left: 10px;
+}
+
+.writer-price {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writer-price p {
+    color: #424242;
+}
+
+.writer-price .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writer-price .wp-b {
+    margin-left: 25px;
+
+}
+
+.writer-price .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writer-price .wp-d {
+    margin-left: 21px;
+
+}
+
+.writer-price .wp-e {
+    margin-left: 18px;
+
+}
+
+.book-name p:hover {
+    color: #cc6600;
+}
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+.sell-audiobook {
+    grid-area: 8/2/9/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: relative;
+
+}
+
+.audiobook {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 10px;
+
+}
+
+.audiobook .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.audiobook .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.sell-audiobook .audiobook-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.audiobook-pic .first-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 150px;
+    top: 264px;
+}
+
+.audiobook-pic .second-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 322px;
+    top: 264px;
+}
+
+.audiobook-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 493px;
+    top: 264px;
+}
+
+.audiobook-pic .forth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 660px;
+    top: 264px;
+}
+
+.audiobook-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 835px;
+    top: 264px;
+}
+
+.forth-headset i,
+.third-headset i,
+.fifth-headset i,
+.second-headset i,
+.first-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.audiobook-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.audiobook-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.audiobook-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.audiobook-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.audiobook-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-audiobook {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-audiobook p {
+    color: #424242;
+}
+
+.writerprice-audiobook .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-audiobook .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-audiobook .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-audiobook .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-audiobook .wp-e {
+    margin-left: 18px;
+
+}
+
+.audiobook-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+
+
+.text-updates {
+    grid-area: 9/2/10/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+.updates {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 10px;
+
+}
+
+.updates .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.updates .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.text-updates .textupdates-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.textupdates-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.textupdates-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.textupdates-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.textupdates-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.textupdates-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-textupdates {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-textupdates p {
+    color: #424242;
+}
+
+.writerprice-textupdates .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-textupdates .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-textupdates .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-textupdates .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-textupdates .wp-e {
+    margin-left: 18px;
+
+}
+
+.textupdates-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.malin p {
+    width: 80px;
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+.audio-updates {
+    grid-area: 10/2/11/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+.updates-audio {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 10px;
+
+}
+
+.updates-audio .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.updates-audio .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.audio-updates .audioupdates-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.audioupdates-pic .first-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 150px;
+    top: 264px;
+}
+
+.audioupdates-pic .second-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 322px;
+    top: 264px;
+}
+
+.audioupdates-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 493px;
+    top: 264px;
+}
+
+.audioupdates-pic .forth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 660px;
+    top: 264px;
+}
+
+.audioupdates-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 835px;
+    top: 264px;
+}
+
+.forth-headset i,
+.third-headset i,
+.fifth-headset i,
+.second-headset i,
+.first-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.audioupdates-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.audioupdates-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.audioupdates-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.audioupdates-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.audioupdates-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-audioupdates {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-audioupdates p {
+    color: #424242;
+}
+
+.writerprice-audioupdates .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-audioupdates .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-audioupdates .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-audioupdates .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-audioupdates .wp-e {
+    margin-left: 18px;
+
+}
+
+.audioupdates-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+
+.receive-audiobook {
+    grid-area: 11/2/12/3;
+    width: 885px;
+    background-color: #1d0709;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    direction: rtl;
+    background-image: url(image/elham.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute;
+
+}
+
+.elham {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 7px;
+
+
+}
+
+.receive-audiobook .receive {
+    width: 149px;
+    height: 32px;
+    font-size: 15px;
+    color: #f5f5f5;
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+    background-color: #170607;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.Discount {
+    grid-area: 12/2/13/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+
+.special-Discount {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 10px;
+
+}
+
+.special-Discount .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.special-Discount .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.Discount-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.Discount-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 493px;
+    top: 264px;
+}
+
+.Discount-pic .forth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 660px;
+    top: 264px;
+}
+
+.Discount-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 835px;
+    top: 264px;
+}
+
+.forth-headset i,
+.third-headset i,
+.fifth-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.Discount-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.Discount-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.Discount-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.Discount-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.Discount-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-Discount {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-Discount p {
+    color: #424242;
+}
+
+.writerprice-Discount .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-Discount .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-Discount .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-Discount .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-Discount .wp-e {
+    margin-left: 18px;
+
+}
+
+.Discount-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.clarisa p {
+    width: 80px;
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.controversial-books {
+    grid-area: 13/2/14/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+
+.controversial {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 10px;
+
+}
+
+.controversial .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.controversial .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.controversialbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+
+.controversialbooks-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 493px;
+    top: 264px;
+}
+
+.controversialbooks-pic .forth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 660px;
+    top: 264px;
+}
+
+.controversialbooks-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 835px;
+    top: 264px;
+}
+
+.forth-headset i,
+.third-headset i,
+.fifth-headset i,
+.second-headset i,
+.first-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.controversialbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.controversialbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.controversialbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.controversialbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.controversialbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-controversial {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-controversial p {
+    color: #424242;
+}
+
+.writerprice-controversial .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-controversial .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-controversial .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-controversial .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-controversial .wp-e {
+    margin-left: 18px;
+
+}
+
+.controversialbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+.second-wife {
+    grid-area: 14/2/15/3;
+    width: 885px;
+    background-color: #302c17;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    direction: rtl;
+    background-image: url(image/zan\ dovom.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute;
+
+}
+
+
+.secondwife {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 7px;
+
+
+}
+
+.receive-audio {
+    width: 149px;
+    height: 32px;
+    font-size: 15px;
+    color: #f5f5f5;
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+    background-color: #262312;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.popular-books {
+    grid-area: 15/2/16/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+.popular {
+    width: 875px;
+    height: 95px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    margin-bottom: 5px;
+    padding: 20px 25px 15px 25px;
+
+
+}
+
+.popular .select {
+    width: 218px;
+    height: 25px;
+    color: #424242;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popular .selling {
+    width: 207px;
+    height: 28px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.popular .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 720px;
+    bottom: 40px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.popularbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+}
+
+.popularbooks-pic .first-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 150px;
+    top: 290px;
+}
+
+.popularbooks-pic .second-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 322px;
+    top: 290px;
+}
+
+.popularbooks-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 493px;
+    top: 290px;
+}
+
+.popularbooks-pic .forth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 660px;
+    top: 290px;
+}
+
+.popularbooks-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 835px;
+    top: 290px;
+}
+
+.forth-headset i,
+.third-headset i,
+.fifth-headset i,
+.second-headset i,
+.first-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.popularbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.popularbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.popularbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.popularbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.popularbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-popularbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-popularbooks p {
+    color: #424242;
+}
+
+.writerprice-popularbooks .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-popularbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-popularbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-popularbooks .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-popularbooks .wp-e {
+    margin-left: 18px;
+
+}
+
+.popularbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.abdo p {
+    width: 80px;
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.Valid-awards {
+    grid-area: 16/2/17/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+.Validawards {
+    width: 875px;
+    height: 95px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    margin-bottom: 5px;
+    padding: 20px 25px 15px 25px;
+
+
+}
+
+.Validawards .award {
+    width: 218px;
+    height: 25px;
+    color: #424242;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Validawards .selling {
+    width: 207px;
+    height: 28px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.Validawards .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 720px;
+    bottom: 40px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.Validawards-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+}
+
+
+.Validawards-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 493px;
+    top: 290px;
+}
+
+.Validawards-pic .forth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 660px;
+    top: 290px;
+}
+
+.Validawards-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    left: 835px;
+    top: 290px;
+}
+
+.forth-headset i,
+.third-headset i,
+.fifth-headset i {
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.Validawards-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.Validawards-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.Validawards-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.Validawards-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.Validawards-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-Validawards {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-Validawards p {
+    color: #424242;
+}
+
+.writerprice-Validawards .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-Validawards .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-Validawards .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-Validawards .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-Validawards .wp-e {
+    margin-left: 18px;
+
+}
+
+.Validawards-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.margaret p {
+    width: 80px;
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.selected-books {
+    grid-area: 17/2/18/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+.selectedbooks {
+    width: 875px;
+    height: 95px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    padding: 20px 25px 15px 25px;
+
+
+}
+
+.selectedbooks .selected {
+    width: 270px;
+    height: 25px;
+    color: #424242;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.selectedbooks .selling {
+    width: 207px;
+    height: 28px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.selectedbooks .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 720px;
+    bottom: 40px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.selectedbooks-pic .first-headset,
+.selectedbooks-pic .third-headset,
+.selectedbooks-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 286px;
+
+}
+
+.selectedbooks-pic .first-headset {
+    left: 150px;
+
+}
+
+.selectedbooks-pic .third-headset {
+    left: 493px;
+
+}
+
+.selectedbooks-pic .fifth-headset {
+    left: 835px;
+
+}
+
+
+
+.selectedbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+}
+
+.selectedbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.selectedbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.selectedbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.selectedbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.selectedbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-selectedbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-selectedbooks p {
+    color: #424242;
+}
+
+.writerprice-selectedbooks .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-selectedbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-selectedbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-selectedbooks .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-selectedbooks .wp-e {
+    margin-left: 18px;
+
+}
+
+.selectedbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+
+.kindness {
+    grid-area: 18/2/19/3;
+    background-color: #7c9c43;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    direction: rtl;
+    background-image: url(image/love.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: relative;
+
+
+}
+
+
+.relation {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 7px;
+
+
+}
+
+.receive-book {
+    width: 108px;
+    height: 32px;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+    background-color: #637d36;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.exciting-books {
+    grid-area: 19/2/20/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+
+.exciting {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 5px;
+
+}
+
+.exciting .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.exciting .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.excitingbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.excitingbooks-pic .second-headset,
+.excitingbooks-pic .third-headset,
+.excitingbooks-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 260px;
+
+}
+
+.excitingbooks-pic .second-headset {
+    left: 322px;
+
+}
+
+.excitingbooks-pic .third-headset {
+    left: 493px;
+
+}
+
+.excitingbooks-pic .fifth-headset {
+    left: 835px;
+
+}
+
+
+.excitingbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.excitingbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.excitingbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.excitingbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.excitingbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-excitingbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-excitingbooks p {
+    color: #424242;
+}
+
+.writerprice-excitingbooks .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-excitingbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-excitingbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-excitingbooks .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-excitingbooks .wp-e {
+    margin-left: 18px;
+
+}
+
+.excitingbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.margaret,
+.abdo {
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+.Professional-reader {
+    grid-area: 20/2/21/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+
+.reader {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 5px;
+
+}
+
+.reader .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.reader .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.Professionalreader-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.Professionalreader-pic .first-headset,
+.Professionalreader-pic .second-headset,
+.Professionalreader-pic .forth-headset,
+.Professionalreader-pic .fifth-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 260px;
+
+}
+
+.Professionalreader-pic .first-headset {
+    left: 150px;
+
+}
+
+.Professionalreader-pic .second-headset {
+    left: 322px;
+
+}
+
+.Professionalreader-pic .forth-headset {
+    left: 660px;
+
+}
+
+.Professionalreader-pic .fifth-headset {
+    left: 835px;
+
+}
+
+.Professionalreader-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.excitingbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.Professionalreader-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.Professionalreader-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.Professionalreader-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-Professionalreader {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-Professionalreader p {
+    color: #424242;
+}
+
+.writerprice-Professionalreader .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-Professionalreader .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-Professionalreader .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-Professionalreader .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-Professionalreader .wp-e {
+    margin-left: 18px;
+
+}
+
+.Professionalreader-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+.lusi {
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.specific-books {
+    grid-area: 21/2/22/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #90a7cd;
+    background-image: url(image/building.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+
+}
+
+.specific {
+    width: 875px;
+    height: 95px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    padding: 20px 25px 15px 25px;
+
+
+}
+
+.specific .test {
+    width: 270px;
+    height: 25px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.specific .selling {
+    width: 207px;
+    height: 28px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.specific .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 720px;
+    bottom: 40px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.specificbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.specificbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.specificbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.specificbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.specificbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.specificbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-specificbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-specificbooks p {
+    color: #212121;
+
+}
+
+.writerprice-specificbooks .wp-a,
+.wp-b,
+.wp-c {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-specificbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-specificbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+.wp-a p:first-child,
+.wp-b p:first-child,
+.wp-c p:first-child {
+    cursor: pointer;
+}
+
+.mehrdad,
+.ali {
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.conversion-books {
+    grid-area: 22/2/23/3;
+    display: flex;
+    width: 875px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+
+.film {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 5px;
+
+}
+
+.film .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.film .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.conversionbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+.conversionbooks-pic .third-headset,
+.conversionbooks-pic .second-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 260px;
+
+}
+
+.conversionbooks-pic .second-headset {
+    left: 315px;
+
+}
+
+.conversionbooks-pic .third-headset {
+    left: 486px;
+
+}
+
+.conversionbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.conversionbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.conversionbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.conversionbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.conversionbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-conversionbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+}
+
+.writerprice-conversionbooks p {
+    color: #424242;
+}
+
+.writerprice-conversionbooks .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-conversionbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-conversionbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-conversionbooks .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-conversionbooks .wp-e {
+    margin-left: 18px;
+
+}
+
+.conversionbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.malin {
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.question-books {
+    grid-area: 23/2/24/3;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+.question {
+    width: 875px;
+    height: 95px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    padding: 20px 25px 15px 25px;
+
+
+}
+
+.question .answer {
+    width: 280px;
+    height: 25px;
+    color: #424242;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.question .selling {
+    width: 207px;
+    height: 28px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.question .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 720px;
+    bottom: 40px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.questionbooks-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+}
+
+
+.questionbooks-pic .forth-headset,
+.questionbooks-pic .fifth-headset,
+.questionbooks-pic .second-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 284px;
+
+}
+
+.questionbooks-pic .second-headset {
+    left: 315px;
+
+}
+
+.questionbooks-pic .forth-headset {
+    left: 660px;
+
+}
+
+.questionbooks-pic .fifth-headset {
+    left: 835px;
+
+}
+
+.questionbooks-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.questionbooks-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.questionbooks-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.questionbooks-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.questionbooks-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-questionbooks {
+    display: flex;
+    width: 875px;
+    height: 28px;
+
+}
+
+.writerprice-questionbooks p {
+    color: #424242;
+}
+
+.writerprice-questionbooks .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-questionbooks .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-questionbooks .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-questionbooks .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-questionbooks .wp-e {
+    margin-left: 18px;
+
+}
+
+.questionbooks-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+
+.russian-writer {
+    grid-area: 24/2/25/3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    direction: rtl;
+    background-image: url(image/dan.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #c8b89e;
+    position: relative;
+
+}
+
+
+.dan {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 7px;
+    z-index: 2;
+
+
+}
+
+.received {
+    width: 149px;
+    height: 32px;
+    font-size: 15px;
+    color: #212121;
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+    background-color: #d6cab7;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+
+.novel-book {
+    grid-area: 25/2/26/3;
+    display: flex;
+    width: 875px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+
+.novel {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 5px;
+
+}
+
+.novel .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.novel .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.novelbook-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+
+
+.novelbook-pic .fifth-headset,
+.novelbook-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 260px;
+
+}
+
+.novelbook-pic .third-headset {
+    left: 483px;
+
+}
+
+
+.novelbook-pic .fifth-headset {
+    left: 825px;
+
+}
+
+.novelbook-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.novelbook-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.novelbook-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.novelbook-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.novelbook-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-novelbook {
+    display: flex;
+    width: 875px;
+    height: 28px;
+}
+
+.writerprice-novelbook p {
+    color: #424242;
+}
+
+.writerprice-novelbook .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-novelbook .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-novelbook .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-novelbook .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-novelbook .wp-e {
+    margin-left: 18px;
+
+}
+
+.novelbook-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+.gorg p {
+    width: 80px;
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.devil {
+    grid-area: 27/2/28/3;
+    background-color: #690705;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    direction: rtl;
+    background-image: url(image/prim.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+
+.prim {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 7px;
+    z-index: 2;
+
+
+}
+
+.visit-p {
+    width: 127px;
+    height: 32px;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+    background-color: #540604;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.listening-book {
+    grid-area: 26/2/27/3;
+    display: flex;
+    width: 875px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    position: absolute;
+
+}
+
+
+.listen {
+    width: 875px;
+    height: 63px;
+    display: flex;
+    direction: rtl;
+    flex-direction: row;
+    padding: 20px 25px 15px 25px;
+    margin-bottom: 5px;
+
+}
+
+.listen .selling {
+    width: 276px;
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+
+.listen .visit-all {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    right: 460px;
+    color: #212121;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.listeningbook-pic {
+    width: 875px;
+    height: 226px;
+    display: flex;
+    padding: 5px 25px 0 0;
+    margin-bottom: 7px;
+
+}
+
+
+.listeningbook-pic .first-headset,
+.listeningbook-pic .second-headset,
+.listeningbook-pic .forth-headset,
+.listeningbook-pic .fifth-headset,
+.listeningbook-pic .third-headset {
+    background-color: #ffffff;
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 260px;
+
+}
+
+.listeningbook-pic .first-headset {
+    left: 140px;
+
+}
+
+.listeningbook-pic .second-headset {
+    left: 311px;
+}
+
+.listeningbook-pic .third-headset {
+    left: 482px;
+
+}
+
+.listeningbook-pic .forth-headset {
+    left: 653px;
+
+}
+
+
+.listeningbook-pic .fifth-headset {
+    left: 825px;
+
+}
+
+.listeningbook-pic img {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.listeningbook-pic a:first-child {
+    margin-left: 0;
+
+}
+
+.listeningbook-name {
+    display: flex;
+    width: 875px;
+    height: 28px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+
+}
+
+.listeningbook-name p {
+    width: 149px;
+    height: 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    margin-right: 15px;
+}
+
+.listeningbook-name p:first-child {
+    margin-left: 10px;
+}
+
+.writerprice-listeningbook {
+    display: flex;
+    width: 875px;
+    height: 28px;
+}
+
+.writerprice-listeningbook p {
+    color: #424242;
+}
+
+.writerprice-listeningbook .wp-a,
+.wp-b,
+.wp-c,
+.wp-d,
+.wp-e {
+    width: 150px;
+    height: 28px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin-left: 15px;
+}
+
+.writerprice-listeningbook .wp-b {
+    margin-left: 25px;
+
+}
+
+.writerprice-listeningbook .wp-c {
+    margin-left: 24px;
+
+}
+
+
+.writerprice-listeningbook .wp-d {
+    margin-left: 21px;
+
+}
+
+.writerprice-listeningbook .wp-e {
+    margin-left: 18px;
+
+}
+
+.listeningbook-name p:hover {
+    color: #cc6600;
+}
+
+
+.wp-a p:first-child:hover,
+.wp-b p:first-child:hover,
+.wp-c p:first-child:hover,
+.wp-d p:first-child:hover,
+.wp-e p:first-child:hover {
+    color: #cc6600;
+    cursor: pointer;
+}
+
+
+.footer {
+    grid-area: 28/1/29/3;
+    width: 100vw;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid #5e942b;
+
+
+}
+
+.panel {
+    height: 68px;
+    width: 1100px;
+    background-color: #FFFFFF;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 110px;
+    direction: rtl;
+    margin-bottom: 30px;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.panel p {
+    font-size: 14px;
+    color: #000000;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 5px 0 0 18px;
+    cursor: pointer;
+
+}
+
+.panel p:hover {
+    color: #d14900;
+}
+
+.download {
+    height: 66px;
+    width: 750px;
+    margin: 0 370px 40px 69px;
+    padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+    direction: rtl;
+
+}
+
+.first-way {
+    height: 40px;
+    width: 179px;
+    background-color: #7bc22b;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+
+.android2 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 30px 0 5px;
+}
+
+.first-way:hover {
+    background-color: #75b828;
+}
+
+.android-i {
+    font-size: 17px;
+    color: #ffffff;
+    position: relative;
+    right: 16px;
+    top: 3px;
+    z-index: 3;
+
+}
+
+
+.second-way {
+    height: 40px;
+    width: 179px;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+
+.google {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 50px;
+    margin-bottom: 29px;
+
+}
+
+.second-way:hover {
+    background-color: #333333;
+}
+
+.google-play i {
+    font-size: 23px;
+    color: #ffffff;
+    position: relative;
+    right: 15px;
+    top: 27px;
+    z-index: 3;
+}
+
+
+.third-way {
+    height: 40px;
+    width: 179px;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+
+.appstore {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 50px;
+    margin-bottom: 41px;
+
+}
+
+.third-way:hover {
+    background-color: #333333;
+}
+
+.apple-i {
+    font-size: 26px;
+    color: #ffffff;
+    position: relative;
+    right: 15px;
+    top: 33px;
+}
+
+.forth-way {
+    height: 40px;
+    width: 179px;
+    background-color: #00adef;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    margin: 3px;
+
+}
+
+.windows2 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 50px;
+    margin-bottom: 43px;
+
+}
+
+.forth-way:hover {
+    background-color: #00a8eb;
+}
+
+.windows-i {
+    font-size: 27px;
+    color: #ffffff;
+    position: relative;
+    right: 10px;
+    top: 35px;
+    z-index: 3;
+}
+
+.information {
+    width: 1300px;
+    height: 250;
+    display: flex;
+
+}
+
+.paragraph {
+    font-size: 16px;
+    color: #555a64;
+    line-height: 32px;
+    text-align: justify;
+    height: 180px;
+    width: 922px;
+    padding: 10px 10px 10px 10px;
+    margin: 0 160px 0 25px;
+
+
+}
+
+.paragraph a {
+    color: #01579b;
+}
+
+.paragraph a:hover {
+    color: #d14900;
+}
+
+.nama {
+    height: 180px;
+    width: 100px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    right: 150px;
+}
+
+.media {
+    height: 180px;
+    width: 112px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    position: relative;
+    top: 27px;
+    right: 150px;
+}
+
+@media screen and (max-width:600px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .bars {
+        display: block;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:767px) {
+
+    .grid-container {
+        grid-template-columns: 40% 885px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+
+    .grid-container {
+        grid-template-columns: 40% 885px 200px;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    .grid-container {
+        grid-template-columns:  40% 885px 200px 40%;
+    }
+
+}
